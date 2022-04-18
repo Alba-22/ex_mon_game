@@ -16,4 +16,7 @@ defmodule ExMon.Game.Actions do
       end
     )
   end
+
+  def attack(move) do
+  end
 end
