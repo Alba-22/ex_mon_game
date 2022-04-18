@@ -19,6 +19,14 @@ defmodule ExMon.Game do
     Agent.get(__MODULE__, & &1)
   end
 
+  # Recebe um novo estado e sobreescreve o estado anterior pelo novo
+  def update(state) do
+    Agent.update(
+      __MODULE__,
+      fn _ -> state end
+    )
+  end
+
   def player, do: Map.get(info(), :player)
 
   def turn, do: Map.get(info(), :turn)
