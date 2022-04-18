@@ -1,6 +1,6 @@
 defmodule ExMon.Player do
   # Variáveis de módulo
-  @required_keys [:life, :name, :move_random, :move_average, :move_heal]
+  @required_keys [:life, :name, :moves]
   @max_life 100
 
   # Fazer com que os campos da struct sejam obrigatórios
@@ -11,9 +11,11 @@ defmodule ExMon.Player do
     %ExMon.Player{
       life: @max_life,
       name: name,
-      move_random: move_random,
-      move_average: move_average,
-      move_heal: move_heal
+      moves: %{
+        move_random: move_random,
+        move_average: move_average,
+        move_heal: move_heal
+      }
     }
   end
 end

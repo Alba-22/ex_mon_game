@@ -18,4 +18,6 @@ defmodule ExMon.Game do
     # &1 -> Estado do jogo
     Agent.get(__MODULE__, & &1)
   end
+
+  def player, do: Map.get(info(), :player)
 end
