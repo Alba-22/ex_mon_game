@@ -1,5 +1,5 @@
 defmodule ExMon.Game.Status do
-  def print_round_message(%{status: :stated} = info) do
+  def print_round_message(%{status: :started} = info) do
     IO.puts("\n ===== The game has started! ===== \n")
     IO.inspect(info)
     IO.puts("---------------------------------")
